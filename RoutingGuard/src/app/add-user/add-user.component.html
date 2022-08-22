@@ -1,0 +1,25 @@
+<div class="">
+    <app-navigation></app-navigation>
+</div>
+<div class="align-items-center justify-content-center w-50 mx-5 my-2 px-5 py-4">
+    <h2>Add User</h2>
+    <div class="my-3">
+        <label for="">Id: </label>
+        <input type="text" class="form-control" [(ngModel)]="id" />
+    </div>
+    <div class="my-3">
+        <label for="">Name: </label>
+        <input type="text" class="form-control" [(ngModel)]="name" />
+    </div>
+    <div class="my-3">
+        <label for="">Phone: </label>
+        <input type="text" class="form-control" [(ngModel)]="phone" />
+    </div>
+    <div class="my-3">
+        <label for="">Email: </label>
+        <input type="text" class="form-control" [(ngModel)]="email" />
+    </div>
+    <div>
+        <button class="btn btn-info" (click)="onAdduser()">AddUser</button>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.banner {
+    background-image: url("../../assets/images/img1.png");
+    height: 800px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(50%);
+}
+
+h1,
+p {
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    top: 50%;
+}
+
+h1 {
+    margin: 0;
+}
+
+.banner-content {
+    padding-top: 150px;
+}
+
+.btn-info {
+    font-size: 18px;
+    line-height: 32.4px;
+    margin-top: 5px;
+    opacity: 0.8;
+    margin-left: 20px;
+    padding: 10px;
+    ;
+}

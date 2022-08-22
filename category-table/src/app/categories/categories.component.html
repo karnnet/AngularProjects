@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-end">
+    <button class="btn btn-info py-2 my-3" (click)="onAddCategory()">Add Category</button>
+</div>
+<div class="row">
+    <ng-template [ngIf]="showForm">
+        <div class="col-md-4">
+            <app-addcategory (categoryAdded)="onCategoryAdded($event)"></app-addcategory>
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="showTable">
+        <div class="col-md-4">
+            <table class="table table-striped table-bordered py-3 my-4">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let category of categories" app-single-category [category]="category" (showView)="onclickShowView($event)" (categorySelected)="onCategorySelected($event)" (categoryEdited)="onCategoryEdited($event)" (categoryDeleted)="onCategoryDeleted($event)">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </ng-template>
+    <div class="col-md-4">
+        <ng-container *ngIf="viewShowCondition">
+            <app-view-category *ngIf="selectedCategory" [category]="selectedCategory" (tableSelected)="showTableAfterView($event)"></app-view-category>
+        </ng-container>
+        <ng-container *ngIf="viewShowCondition">
+            <app-edit-category *ngIf="editCategory" [category]="editCategory" (categoryUpdated)="onUpdateCategory($event)" (tableSelected)="showTableAfterView($event)"></app-edit-category>
+        </ng-container>
+    </div>
+</div>

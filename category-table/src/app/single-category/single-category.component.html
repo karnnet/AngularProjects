@@ -1,0 +1,9 @@
+<td>
+    {{category.id}}</td>
+<td>{{category.name}}</td>
+<td>{{category.age}}</td>
+<td>
+    <button class="btn btn-warning btn-sm m-2" (click)="onCategorySelect(category)">View</button>
+    <button class="btn btn-primary btn-sm m-2" (click)="onEditCategory(category)">Edit</button>
+    <button class="btn btn-danger btn-sm m-2" (click)="onDeleteCategory(category)">Delete</button>
+</td>

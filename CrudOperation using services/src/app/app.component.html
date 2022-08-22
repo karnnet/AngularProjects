@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5 class="m-4">Persons Data</h5>
+        </div>
+    </div>
+</div>
+<div class="row p-3">
+    <div class="col-md-12 text-end">
+        <button class="btn btn-primary" (click)="onAddPerson()"> Add Person</button>
+    </div>
+</div>
+<div class="row">
+    <div class="clo-md-12">
+        <app-persons *ngIf="selectedComponent=='persons'"></app-persons>
+        <app-add-person *ngIf="selectedComponent=='add person'"></app-add-person>
+        <app-view-person *ngIf="selectedComponent=='view person'"></app-view-person>
+        <app-edit-category *ngIf="selectedComponent=='edit person'"></app-edit-category>
+    </div>
+</div>

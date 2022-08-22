@@ -1,0 +1,56 @@
+<div [ngStyle]="{'background-color':boxBackgroundColor,'color':boxTextColor,'margin':boxMargin,'text-align':boxTextAlign}">
+    I want this background color green and text color black
+</div>
+
+<button (click)="OnButtonClick()">Change color and background of Box</button>
+
+
+
+<div [ngStyle]="{'text-align':boxTextAlign}"> This is user ng-template</div>
+
+<ng-template [ngIf]="showContent">
+    <div [ngStyle]="{'text-align':boxTextAlign,'text-color':ngTextColor}">Text under ng-template</div>
+</ng-template>
+
+
+
+<div class="my-4">
+    <button [ngClass]="buttonClass" [ngStyle]="{'color':ngTextColor,'margin-left':leftMargin}" (click)="onCreateUser()">Create user</button>
+    <div [ngStyle]="{'margin-left':leftMargin}" *ngIf="isUserCreated; else noUser">user is created</div>
+    <ng-template #noUser>
+        <div [ngStyle]="{'margin-left':leftMargin}">click on button add user to create</div>
+    </ng-template>
+</div>
+<!-- <div class="my-4">
+    <button [ngClass]="buttonClass" [ngStyle]="{'color':ngTextColor,'margin-left':leftMargin}" (click)="onUserCreate()">Create user</button>
+    <div *ngIf="isCreatedUser; then thenBlock; else elseBlock"></div>
+    <ng-template #thenBlock>
+        <div>user created</div>
+    </ng-template>
+    <ng-template #elseBlock>
+        <div>click on user to create div</div>
+    </ng-template>
+</div> -->
+
+<div class="my-4">
+    <button [ngClass]="buttonClass" [ngStyle]="{'color':ngTextColor,'margin-left':leftMargin}" (click)="onUserCreate()">Create user</button>
+    <ng-container *ngIf="isCreatedUser">
+        <div>user created</div>
+        <div>user created successfully</div>
+    </ng-container>
+    <ng-container *ngIf="!isCreatedUser">
+        <div>user not created</div>
+        <div>user not created successfully</div>
+    </ng-container>
+</div>
+<!-- <div class="my-4">
+    <button [ngClass]="buttonClass" [ngStyle]="{'color':ngTextColor,'margin-left':leftMargin}" (click)="onUserCreate()">Create user</button>
+    <div *ngIf="isCreatedUser">
+        <div>user created</div>
+        <div>user created successfully</div>
+    </div>
+    <div *ngIf="!isCreatedUser">
+        <div>user not created</div>
+        <div>user not created successfully</div>
+    </div>
+</div> -->

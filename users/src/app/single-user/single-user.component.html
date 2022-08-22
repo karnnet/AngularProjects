@@ -1,0 +1,9 @@
+<div>
+    <div class="box my-3 p-2" *ngIf="user">
+        <div>Id:{{user.id}}</div>
+        <div>Name:{{user.name}}</div>
+        <div>Age:{{user.age}}</div>
+        <button class="btn btn-primary p-2 m-2" (click)="onUserSelect()">View User</button>
+        <button class="btn btn-warning p-2 m-2" (click)="onUserEditSelect()">Edit User</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3>Users List</h3>
+        <div *ngIf="selectedUser">Selected User:{{selectedUser.name}}</div>
+        <div class="row">
+            <app-user *ngFor="let user of users; trackBy: trackUser" (userSelected)="onUserSelect($event)" [user]="user">
+            </app-user>
+        </div>
+    </div>
+</div>
+
+<p [ngStyle]="{'color':textcolor}">This is paragraph</p>
+<h1>{{height}}</h1>

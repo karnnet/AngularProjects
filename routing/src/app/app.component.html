@@ -1,0 +1,15 @@
+<header>
+    <nav>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-link">Home</a></li>
+            <li class="nav-item"><a routerLink="/about" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-link">About</a></li>
+            <li class="nav-item"><a routerLink="/products" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-link">Products</a></li>
+            <li class="nav-item"><a routerLink="/contact" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-link">ContactUs</a></li>
+            <li class="nav-item"><a routerLink="/users" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-link">Users</a></li>
+
+            <button class="btn btn-primary btn-sm m-2" (click)="onLogin()">Login</button>
+            <button class="btn btn-dark btn-sm m-2" (click)="onLogout()">Logout</button>
+        </ul>
+    </nav>
+</header>
+<router-outlet></router-outlet>

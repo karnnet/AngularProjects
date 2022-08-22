@@ -1,0 +1,13 @@
+<div>
+    <h2>Users Data</h2>
+    <div class="border border-dark p-3">
+        <div>Id:{{user.id}}</div>
+        <div>Name:{{user.name}}</div>
+        <div>Phone:{{user.phone}}</div>
+        <div>Email:{{user.email}}</div>
+        <div>
+            <button class="btn btn-info my-2" (click)="onEditUser(user)">Edit</button>
+            <button class="btn btn-danger mx-2" (click)="onDeleteuser()">Delete</button>
+        </div>
+    </div>
+</div>

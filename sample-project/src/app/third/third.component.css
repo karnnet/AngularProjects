@@ -1,0 +1,111 @@
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.col {
+    width: 33.33%;
+}
+
+h2,
+h3 {
+    color: #000;
+}
+
+.pricing {
+    color: #fff!important;
+    background-color: #ccc!important;
+}
+
+.pricing-row {
+    padding: 0 8px;
+    margin-top: 64px;
+}
+
+.pricing-header {
+    text-align: center;
+}
+
+.pricing-header h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.pricing-header h3 {
+    margin: 18px 0;
+    text-align: center;
+}
+
+.pricing-column {
+    padding: 28px 10px;
+}
+
+.pricing-column-wrapper {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.pricing-column-wrapper p {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.pricing-column ul,
+.pricing-column-active ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-column li,
+.pricing-column-active li {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-column-package {
+    background-color: #000;
+    color: #fff;
+    padding: 32px 16px;
+}
+
+.pricing-column-package-pro {
+    background-color: #f44336 !important;
+    padding: 28px 16px !important;
+}
+
+.price-value {
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.rate-span {
+    opacity: 0.6;
+}
+
+.padding-128x16 {
+    padding: 128px 16px !important;
+}
+
+.padding-12x24 {
+    padding: 12px 24px !important;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    border: none;
+}
+
+.signup {
+    padding: 24px 5px !important;
+    background-color: #f1f1f1 !important;
+}

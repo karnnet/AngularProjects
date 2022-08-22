@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+        <app-add-user (userAdded)="onUserAdd($event)"></app-add-user>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4 p-2">
+        <h1>User List</h1>
+        <!-- <div *ngIf="selectedUser">Selected User:Id: {{selectedUser.id}} Name:{{selectedUser.name}} Age:{{selectedUser.age}}
+        </div> -->
+        <div class="p-3">
+            <app-single-user *ngFor="let user of users; trackBy:trackUser" (userSelected)="onUserSelect($event)" (userSelectedForEdit)="onUserEditSelect($event)" [user]="user">
+            </app-single-user>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-2" *ngIf="selectedUser">
+        <h2>View User List</h2>
+        <div class="py-3">
+            <app-child-one [selectedUserToChildOne]="selectedUser"></app-child-one>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 p-2" *ngIf="selectedUserForEdit">
+        <h2>Edit User List</h2>
+        <div class="p-3">
+            <app-child-two [selectedUserToChildTwo]="selectedUserForEdit"></app-child-two>
+        </div>
+    </div>
+</div>

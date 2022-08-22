@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-2">
+            <input type="text" class="form-control" placeholder="search here" [(ngModel)]="filteredString" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Posts Data</h3>
+            <div class="row ">
+                <div class="col-md-6">
+                    <a class="btn btn-success" routerLink="addPost">Add Post</a>
+                </div>
+            </div>
+            <table class="table" *ngIf="posts && posts.length">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Body</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of posts |filterPost:filteredString">
+                        <td>{{post.title}}</td>
+                        <td>{{post.category}}</td>
+                        <td>{{post.body}}</td>
+                        <td>
+                            <a [routerLink]="[ '/post',post.id, 'edit'] " class="btn btn-dark mx-2 px-4 ">Edit</a>
+                            <a (click)="deletePost(post.id) " class="btn btn-success mx-2 ">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="!posts">
+                <p>No posts Please add post</p>
+            </div>
+        </div>
+        <div class="col-md-6  p-5">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

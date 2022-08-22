@@ -1,0 +1,61 @@
+<div class="my-5 mx-4 p-5">
+    <h3>User Details</h3>
+    <div class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>index</th>
+                <th>count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="
+            let user of users;
+            index as i;
+             even as e; 
+            count as totalUsers;
+            first as firstRow;
+            last as lastRow;
+            odd as o" [ngClass]="{
+            even:e,
+            odd:o,
+            first:firstRow,
+            last:lastRow}">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{i}}</td>
+                <td>{{totalUsers}}</td>
+            </tr>
+        </tbody>
+    </div>
+</div>
+<div class="m-4">
+    <h1 class="m-4">Categories List</h1>
+    <table class="table m-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories; trackBy:trackUser">
+                <td>{{category.id}}</td>
+                <td>{{category.categoryName}}</td>
+                <td><input type="text" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="m-5">
+        <button class="btn btn-primary rounded" (click)="onAddCategory()">Add category</button>
+    </div>
+</div>
+
+<ng-template *ngIf="showContent; else elseBlock">
+    <p>hello</p>
+</ng-template>
+<ng-template #elseBlock>
+    <p>hello</p>
+</ng-template>

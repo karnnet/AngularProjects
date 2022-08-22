@@ -1,0 +1,19 @@
+<div class="border border-info m-5 p-5">
+    <h5 class="m-3">Add Person</h5>
+    <div class="m-3">
+        <label>Id</label>
+        <input type="text" class="form-control w-50" [(ngModel)]="id" />
+    </div>
+    <div class="m-3">
+        <label>Name</label>
+        <input type="text" class="form-control w-50" [(ngModel)]="name" />
+    </div>
+    <div class="m-3">
+        <label>Address</label>
+        <input type="text" class="form-control w-50" [(ngModel)]="address" />
+    </div>
+    <div class="m-3">
+        <button class="btn btn-secondary m-2" (click)="onAddPerson()">Add Person</button>
+        <button class="btn btn-warning m-2" (click)="onBack()">Back to Person</button>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<ul>
+    <li>
+        <a [routerLink]="['/users',1,'navneet']" [queryParams]="{name:'navneet',hi:'navneet'}">Got to navneet user</a>
+    </li>
+    <li>
+        <a [routerLink]="['/users',2,'ajay']" [queryParams]="{name:'ajay',hi:'ajay'}">Go to ajay user</a>
+    </li>
+</ul>
+<div>
+    <router-outlet></router-outlet>
+</div>

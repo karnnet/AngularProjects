@@ -1,0 +1,34 @@
+header {
+    width: 100%;
+    background-color: rgb(51, 51, 230);
+}
+
+.row {
+    display: flex;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ccc;
+}
+
+.col-logo,
+.col-nav {
+    width: 50%;
+}
+
+.col-nav {
+    text-align: right;
+    padding: 35px;
+    ;
+}
+
+a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+app-test {
+    color: blue;
+}

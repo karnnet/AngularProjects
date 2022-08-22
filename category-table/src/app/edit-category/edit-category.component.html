@@ -1,0 +1,14 @@
+<div class="m-4">
+    <h3>Update Category</h3>
+    <div>
+        <label class="p-2" for="">Id</label>
+        <input type="text" class="form-control" [(ngModel)]="id" />
+        <label class="p-2" for="">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="name" />
+        <label class="p-2" for="">Age</label>
+        <input type="text" class="form-control" [(ngModel)]="age" />
+        <div class="my-3">
+            <button class="btn btn-warning btn-sm m-1" (click)="OnUpdateCategory()">Update</button>
+            <button class="btn btn-warning btn-sm m-1" (click)="backToTable(category)">BackToTable</button>
+        </div>
+    </div>

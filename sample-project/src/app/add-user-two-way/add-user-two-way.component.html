@@ -1,0 +1,11 @@
+<div>
+    <label for="">Add User Two-Way</label>
+    <input type="text" [(ngModel)]="userName" />
+</div>
+<div>
+    {{userName}}
+</div>
+<img [attr.src]="imgUrl" />
+
+<button [ngClass]="classNames" [class.btn-sm]="isBUttonSmall" [class.btn-primary]="isBUttonPrimary">AddHere</button>
+<button (click)="onButtonClick()">Make button smaller</button>
